@@ -1,8 +1,8 @@
 package mappings
 
 import (
-	articlesstore "sample_go_grpc_server/database/articles"
-	articlesservice "sample_go_grpc_server/gen/proto"
+	articlesstore "github.com/Nikita-Filonov/sample_go_grpc_server/database/articles"
+	articlesservice "github.com/Nikita-Filonov/sample_go_grpc_server/gen/proto"
 )
 
 func MapArticleModelToApiArticle(model articlesstore.ArticleModel) *articlesservice.Article {

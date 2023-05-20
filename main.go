@@ -3,13 +3,13 @@ package main
 import (
 	"flag"
 	"fmt"
+	articlesstore "github.com/Nikita-Filonov/sample_go_grpc_server/database/articles"
+	"github.com/Nikita-Filonov/sample_go_grpc_server/server/articles"
+	"github.com/Nikita-Filonov/sample_go_grpc_server/utils/config"
+	"github.com/Nikita-Filonov/sample_go_grpc_server/utils/logger"
 	"google.golang.org/grpc"
 	"log"
 	"net"
-	articlesstore "sample_go_grpc_server/database/articles"
-	"sample_go_grpc_server/server/articles"
-	"sample_go_grpc_server/utils/config"
-	"sample_go_grpc_server/utils/logger"
 )
 
 func main() {

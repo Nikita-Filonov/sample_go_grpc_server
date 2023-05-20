@@ -1,4 +1,4 @@
-module sample_go_grpc_server
+module github.com/Nikita-Filonov/sample_go_grpc_server
 
 go 1.20
 

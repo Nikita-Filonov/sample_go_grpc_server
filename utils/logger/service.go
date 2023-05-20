@@ -1,11 +1,10 @@
 package logger
 
 import (
-	"sample_go_grpc_server/utils/config"
-	"time"
-
+	"github.com/Nikita-Filonov/sample_go_grpc_server/utils/config"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
+	"time"
 )
 
 type Service interface {

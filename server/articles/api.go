@@ -2,9 +2,9 @@ package articles
 
 import (
 	"context"
-	"sample_go_grpc_server/utils/mappings"
+	articlesservice "github.com/Nikita-Filonov/sample_go_grpc_server/gen/proto"
+	"github.com/Nikita-Filonov/sample_go_grpc_server/utils/mappings"
 )
-import articlesservice "sample_go_grpc_server/gen/proto"
 
 func (s *Server) GetArticle(
 	_ context.Context,

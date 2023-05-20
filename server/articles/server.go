@@ -1,10 +1,10 @@
 package articles
 
 import (
+	articlesstore "github.com/Nikita-Filonov/sample_go_grpc_server/database/articles"
+	articlesservice "github.com/Nikita-Filonov/sample_go_grpc_server/gen/proto"
+	"github.com/Nikita-Filonov/sample_go_grpc_server/utils/logger"
 	"google.golang.org/grpc"
-	articlesstore "sample_go_grpc_server/database/articles"
-	articlesservice "sample_go_grpc_server/gen/proto"
-	"sample_go_grpc_server/utils/logger"
 )
 
 type Server struct {

@@ -3,9 +3,9 @@ package database
 import (
 	"database/sql"
 	"fmt"
+	"github.com/Nikita-Filonov/sample_go_grpc_server/utils/config"
+	"github.com/Nikita-Filonov/sample_go_grpc_server/utils/logger"
 	_ "github.com/mattn/go-sqlite3"
-	"sample_go_grpc_server/utils/config"
-	"sample_go_grpc_server/utils/logger"
 )
 
 type Client struct {

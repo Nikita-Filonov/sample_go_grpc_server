@@ -1,7 +1,7 @@
 package articlesstore
 
 import (
-	articlesservice "sample_go_grpc_server/gen/proto"
+	articlesservice "github.com/Nikita-Filonov/sample_go_grpc_server/gen/proto"
 )
 
 type Store interface {
