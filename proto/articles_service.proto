@@ -1,0 +1,46 @@
+syntax = "proto3";
+option go_package = "./;articlesservice";
+
+service ArticlesService {
+  rpc GetArticle (GetArticleRequest) returns (GetArticleResponse);
+  rpc CreateArticle(CreateArticleRequest) returns (CreateArticleResponse);
+  rpc UpdateArticle(UpdateArticleRequest) returns (UpdateArticleResponse);
+  rpc DeleteArticle(DeleteArticleRequest) returns (DeleteArticleResponse);
+}
+
+message Article {
+  string id = 1;
+  string title = 2;
+  string author = 3;
+  string description = 4;
+}
+
+message GetArticleRequest {
+  string article_id = 1;
+}
+
+message GetArticleResponse {
+  Article article = 1;
+}
+
+message CreateArticleRequest {
+  Article article = 1;
+}
+
+message CreateArticleResponse {
+  Article article = 1;
+}
+
+message UpdateArticleRequest {
+  Article article = 1;
+}
+
+message UpdateArticleResponse {
+  Article article = 1;
+}
+
+message DeleteArticleRequest {
+  string article_id = 1;
+}
+
+message DeleteArticleResponse {}

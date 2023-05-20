@@ -1,0 +1,9 @@
+app:
+  port: 8000
+
+logger:
+  is_dev_mode: true
+  level: debug # debug|info|error
+
+database:
+  file: main.db
