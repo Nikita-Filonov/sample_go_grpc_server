@@ -1,3 +1,4 @@
+-- +migrate Up
 CREATE TABLE articles
 (
     id          VARCHAR(50) NOT NULL,
@@ -6,3 +7,6 @@ CREATE TABLE articles
     description VARCHAR(500),
     PRIMARY KEY (id)
 );
+
+-- +migrate Down
+DROP TABLE articles;

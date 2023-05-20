@@ -32,7 +32,8 @@ go mod download
 
 Apply migrations
 ```shell
-
+go install github.com/rubenv/sql-migrate/...@latest
+sql-migrate up -config=./infrastructure/config.yml
 ```
 
 Finally run the server

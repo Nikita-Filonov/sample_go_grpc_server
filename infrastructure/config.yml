@@ -7,3 +7,8 @@ logger:
 
 database:
   file: main.db
+
+development:
+  dialect: sqlite3
+  datasource: main.db
+  dir: migrations
