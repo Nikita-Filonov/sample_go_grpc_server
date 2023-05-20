@@ -3,7 +3,6 @@ module sample_go_grpc_server
 go 1.20
 
 require (
-	github.com/golang-migrate/migrate v3.5.4+incompatible
 	github.com/mattn/go-sqlite3 v1.14.16
 	go.uber.org/zap v1.24.0
 	google.golang.org/grpc v1.55.0
