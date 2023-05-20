@@ -5,7 +5,7 @@ type App struct {
 }
 
 type Logger struct {
-	IsDevMode bool   `yaml:"is_dev_mode"`
+	IsDevMode bool   `yaml:"isDevMode"`
 	Level     string `yaml:"level"`
 }
 

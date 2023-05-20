@@ -2,7 +2,7 @@ app:
   port: 8000
 
 logger:
-  is_dev_mode: true
+  isDevMode: true
   level: debug # debug|info|error
 
 database:
