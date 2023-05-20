@@ -14,7 +14,7 @@ type Database struct {
 }
 
 type Config struct {
-	App      `yaml:"app" validate:"required"`
-	Logger   `yaml:"logger" validate:"required"`
-	Database `yaml:"database" validate:"required"`
+	App      App      `yaml:"app" validate:"required"`
+	Logger   Logger   `yaml:"logger" validate:"required"`
+	Database Database `yaml:"database" validate:"required"`
 }
