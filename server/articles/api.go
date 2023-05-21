@@ -14,7 +14,15 @@ func (s *Server) GetArticle(
 
 	article, err := s.articlesStore.GetArticle(request.ArticleId)
 
-	return &articlesservice.GetArticleResponse{Article: mappings.MapArticleModelToApiArticle(article)}, err
+	if err != nil {
+		return mappings.GetArticleNotFoundError(request.ArticleId), nil
+	}
+
+	return &articlesservice.GetArticleResponse{
+		Result: &articlesservice.GetArticleResponse_Article{
+			Article: mappings.MapArticleModelToResponse(article),
+		},
+	}, nil
 }
 
 func (s *Server) CreateArticle(
@@ -25,7 +33,11 @@ func (s *Server) CreateArticle(
 
 	article, err := s.articlesStore.CreateArticle(request.Article)
 
-	return &articlesservice.CreateArticleResponse{Article: mappings.MapArticleModelToApiArticle(article)}, err
+	return &articlesservice.CreateArticleResponse{
+		Result: &articlesservice.CreateArticleResponse_Article{
+			Article: mappings.MapArticleModelToResponse(article),
+		},
+	}, err
 }
 
 func (s *Server) UpdateArticle(
@@ -36,7 +48,11 @@ func (s *Server) UpdateArticle(
 
 	article, err := s.articlesStore.UpdateArticle(request.Article)
 
-	return &articlesservice.UpdateArticleResponse{Article: mappings.MapArticleModelToApiArticle(article)}, err
+	return &articlesservice.UpdateArticleResponse{
+		Result: &articlesservice.UpdateArticleResponse_Article{
+			Article: mappings.MapArticleModelToResponse(article),
+		},
+	}, err
 }
 
 func (s *Server) DeleteArticle(

@@ -15,12 +15,26 @@ message Article {
   string description = 4;
 }
 
+enum ErrorType {
+  NOT_FOUND = 0;
+  ALREADY_EXISTS = 1;
+  UNSPECIFIED = 2;
+}
+
+message Error {
+  string message = 1;
+  ErrorType type = 2;
+}
+
 message GetArticleRequest {
   string article_id = 1;
 }
 
 message GetArticleResponse {
-  Article article = 1;
+  oneof result {
+    Error error = 1;
+    Article article = 2;
+  }
 }
 
 message CreateArticleRequest {
@@ -28,7 +42,10 @@ message CreateArticleRequest {
 }
 
 message CreateArticleResponse {
-  Article article = 1;
+  oneof result {
+    Error error = 1;
+    Article article = 2;
+  }
 }
 
 message UpdateArticleRequest {
@@ -36,7 +53,10 @@ message UpdateArticleRequest {
 }
 
 message UpdateArticleResponse {
-  Article article = 1;
+  oneof result {
+    Error error = 1;
+    Article article = 2;
+  }
 }
 
 message DeleteArticleRequest {
