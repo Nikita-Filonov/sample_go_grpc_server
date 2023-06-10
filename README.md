@@ -44,3 +44,20 @@ Finally run the server
 ```shell
 go run main.go
 ```
+
+## Setup project in docker
+
+You can run project inside docker, make sure you have docker installed
+
+```shell
+docker build . -t sample_go_grpc_server
+docker run -p 8000:8000 sample_go_grpc_server
+```
+
+Apply migrations
+```shell
+docker ps
+docker exec -it <container-id> sh
+sql-migrate up -config=./infrastructure/config.yml
+exit
+```
