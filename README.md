@@ -50,7 +50,7 @@ go run main.go
 You can run project inside docker, make sure you have docker installed
 
 ```shell
-git clone https://github.com/Nikita-Filonov/sample_go_grpc_server`
+git clone https://github.com/Nikita-Filonov/sample_go_grpc_server
 cd ./sample_go_grpc_server
 docker build . -t sample_go_grpc_server
 docker run -p 8000:8000 sample_go_grpc_server
