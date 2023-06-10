@@ -42,5 +42,5 @@ sql-migrate up -config=./infrastructure/config.yml
 Finally run the server
 
 ```shell
-go mod download
+go run main.go
 ```
